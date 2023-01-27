@@ -1,0 +1,213 @@
+@charset "UTF-8";
+@import url("./resetStyle.css");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100&display=swap");
+@font-face {
+  font-family: "Trebuchet MS";
+  src: url("../../assets/fonts/trebuchetms.eot"); /* IE9 Compat Modes */
+  src: url("../../assets/fonts/trebuchetms.woff2") format("woff2"), url("../../assets/fonts/trebuchetms.woff") format("woff"), url("../../assets/fonts/trebuchetms.ttf") format("truetype"); /* Старые Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Trebuchet MS";
+  src: url("../../assets/fonts/trebuchetms-Bold.eot"); /* IE9 Compat Modes */
+  src: url("../../assets/fonts/trebuchetms-Bold.woff2") format("woff2"), url("../../assets/fonts/trebuchetms-Bold.woff") format("woff"), url("../../assets/fonts/trebuchetms-Bold.ttf") format("truetype"); /* Старые Safari, Android, iOS */
+  font-weight: 700;
+  font-style: normal;
+}
+#root {
+  min-height: 100%;
+  background: url("../../assets/images/pattern.png");
+}
+
+.container {
+  width: calc(100% - 15px);
+  padding: 0 15px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.main__restricted {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  padding: 36px 0;
+}
+.content__title {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 100;
+  font-size: 36px;
+  line-height: 44px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 80px;
+}
+@media (max-width: 1200px) {
+  .cards {
+    column-gap: 50px;
+  }
+}
+@media (max-width: 1120px) {
+  .cards {
+    column-gap: 30px;
+  }
+}
+@media (max-width: 1024px) {
+  .cards {
+    column-gap: 80px;
+    row-gap: 60px;
+    flex-wrap: wrap;
+  }
+}
+
+.card {
+  min-width: 320px;
+  font-family: "Trebuchet MS";
+}
+.card__block {
+  padding: 21px 0 0 0px;
+  min-height: 480px;
+  background-color: #fff;
+  border: 4px solid #1698D9;
+  border-radius: 12px;
+  clip-path: polygon(43px 0, 100% 0, 100% 100%, 0 100%, 0 43px);
+  overflow: hidden;
+  color: #000;
+  position: relative;
+  margin-bottom: 14px;
+  cursor: pointer;
+  position: relative;
+}
+.card__block::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 105px;
+  top: -17px;
+  left: 0;
+  background-color: #2EA8E6;
+  z-index: 2;
+  transform: rotate(45deg);
+}
+.card__block:hover {
+  border: 4px solid #2EA8E6;
+}
+.card__block:hover .card__label {
+  background-color: #2EA8E6;
+}
+.card__tagline {
+  padding-left: 51px;
+  color: #666666;
+  line-height: 18.58px;
+  margin-bottom: 5px;
+}
+.card__tagline p.mouse-out {
+  color: #E62E7A;
+}
+.card__title {
+  padding-left: 51px;
+  color: #000;
+  font-size: 48px;
+  line-height: 55.73px;
+  font-weight: 700;
+}
+.card__taste {
+  padding-left: 51px;
+  color: #000;
+  font-size: 24px;
+  line-height: 27.87px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.card__subtitle {
+  padding-left: 51px;
+  color: #666666;
+  font-size: 14px;
+  line-height: 16px;
+}
+.card__image {
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+}
+.card__image img {
+  display: block;
+}
+.card__label {
+  background-color: #1698D9;
+  border-radius: 50%;
+  color: #fff;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+}
+.card__label p:first-child {
+  font-size: 42px;
+  line-height: 38px;
+}
+.card__label p:last-child {
+  font-size: 21px;
+}
+.card__bottom-text p {
+  color: #fff;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+}
+.card__bottom-text p span {
+  color: #22a7e9;
+  text-decoration: underline dashed;
+  cursor: pointer;
+}
+
+.card.disabled .card__block {
+  position: relative;
+  border: 4px solid #b3b3b3;
+  cursor: default;
+}
+.card.disabled .card__block::before {
+  background-color: #b3b3b3;
+}
+.card.disabled .card__block::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(235, 235, 235, 0.6);
+  z-index: 1;
+}
+.card.disabled .card__label {
+  background-color: #b3b3b3;
+  z-index: 2;
+}
+.card.disabled .card__bottom-text p {
+  color: #FFFF66;
+}
+
+.card.selected .card__block {
+  border: 4px solid #d91667;
+}
+.card.selected .card__block::before {
+  background-color: #d91667;
+}
+.card.selected .card__label {
+  background-color: #d91667;
+}
