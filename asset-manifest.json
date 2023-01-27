@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/funbox-test/static/css/main.9c64fd65.css",
-    "main.js": "/funbox-test/static/js/main.89c281d2.js",
+    "main.js": "/funbox-test/static/js/main.faebaea0.js",
     "static/media/trebuchetms.ttf": "/funbox-test/static/media/trebuchetms.9f1aa0037c24e0f6935e.ttf",
     "static/media/cat.png": "/funbox-test/static/media/cat.83c44837451a8bdc6a4f.png",
     "static/media/trebuchetms-Bold.ttf": "/funbox-test/static/media/trebuchetms-Bold.737f1c250201dcfec8e3.ttf",
@@ -14,10 +14,10 @@
     "static/media/trebuchetms-Bold.woff2": "/funbox-test/static/media/trebuchetms-Bold.dcac36883edf28c4c330.woff2",
     "index.html": "/funbox-test/index.html",
     "main.9c64fd65.css.map": "/funbox-test/static/css/main.9c64fd65.css.map",
-    "main.89c281d2.js.map": "/funbox-test/static/js/main.89c281d2.js.map"
+    "main.faebaea0.js.map": "/funbox-test/static/js/main.faebaea0.js.map"
   },
   "entrypoints": [
     "static/css/main.9c64fd65.css",
-    "static/js/main.89c281d2.js"
+    "static/js/main.faebaea0.js"
   ]
 }
