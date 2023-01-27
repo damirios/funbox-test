@@ -38,7 +38,7 @@ export default function Card(props) {
     let isSelected = selected.includes(productID);
     if (isDisabled) {
         fullClassName += " disabled";
-        bottomParagraph = <p>Печалька, с {taste} закончился.</p>
+        bottomParagraph = <p>Печалька, {taste} закончился.</p>
     }
     if (isSelected) {
         fullClassName += " selected";
